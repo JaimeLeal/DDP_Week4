@@ -1,13 +1,12 @@
 ---
-title       :  DDP Final Project
-subtitle    :  Electric power plants in the U.S.
-author      :  Jaime Leal
-framework   : io2012        
-highlighter : highlight.js  
-hitheme     : tomorrow      
-widgets     : []            
-knit        : slidify::knit2slides  
----  
+title: DDP Final Project
+subtitle: Electric power plants in the U.S.
+author: Jaime Leal
+date: February 02, 2019
+output: ioslides_presentation
+---
+
+
 
 ## Application overview
 <div style='text-align: center;'>
@@ -22,7 +21,7 @@ The application shows the locations of the electric power plants in the United S
 **Output** : The interactive map diplays each location of a power plant with a circle. 
 If the markers are near each other they are grouped as a cluster. To see each individual location, zoom in.
 
----
+
 ## Data source
 The U.S. Energy Information Administration has a dataset of 8940 electric power plants in the U.S. There is information about the location of each plant, its capacity and primary source.
 
@@ -49,7 +48,7 @@ print(as.character(unique(power_plants$PrimSource)))
 ##  [9] "wind"           "other"          "batteries"      "solar"
 ```
 
----
+
 ## Map: clusters 1/2
 <div style='text-align: center;'>
     <img width=100% src='./map1.png' />
@@ -58,7 +57,7 @@ print(as.character(unique(power_plants$PrimSource)))
 The interactive map diplays each location of a power plant with a blue circle. 
 The markers that are near each other are grouped as a cluster. In this case there are three main clusters...
 
----
+
 ## Map: clusters 2/2
 <div style='text-align: center;'>
     <img width=100% src='./map2.png' />
