@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DDP Final Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="DDP Final Project">
+  <meta name="author" content="Jaime Leal">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>DDP Final Project</h1>
+    <h2>Electric power plants in the U.S.</h2>
+    <p>Jaime Leal<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Application overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+    <img width=100% src='overview.png' />
+</div>
+
+<p>The application shows the locations of the electric power plants in the United States segmented by their primary energy source. </p>
+
+<p>Application URL: <a href="https://jaimeleal.shinyapps.io/ddp-final-project/">https://jaimeleal.shinyapps.io/ddp-final-project/</a> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How to use it</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application is very simple to use.</p>
+
+<h3>Input</h3>
+
+<p>From the dropdown list on the right, select the primary energy source.</p>
+
+<h3>Output</h3>
+
+<p>The interactive map diplays each location of a power plant with a circle. 
+If the markers are near each other they are grouped as a cluster. To see each individual location, zoom in.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Data source</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The U.S. Energy Information Administration has a dataset of 8940 electric power plants in the U.S. There is information about the location of each plant, its capacity and primary source.</p>
+
+<pre><code class="r"># x = &quot;https://www.eia.gov/maps/map_data/PowerPlants_US_EIA.zip&quot;
+# download.file(x,&quot;PowerPlants_US.zip&quot;)
+# unzip(&quot;PowerPlants_US.zip&quot;,&quot;PowerPlants_US_201810.dbf&quot;)
+power_plants &lt;- foreign::read.dbf(&quot;PowerPlants_US_201810.dbf&quot;)
+print(dim(power_plants))
+</code></pre>
+
+<pre><code>## [1] 8940   31
+</code></pre>
+
+<pre><code class="r">print(as.character(unique(power_plants$PrimSource)))
+</code></pre>
+
+<pre><code>##  [1] &quot;hydroelectric&quot;  &quot;natural gas&quot;    &quot;coal&quot;           &quot;nuclear&quot;       
+##  [5] &quot;petroleum&quot;      &quot;pumped storage&quot; &quot;geothermal&quot;     &quot;biomass&quot;       
+##  [9] &quot;wind&quot;           &quot;other&quot;          &quot;batteries&quot;      &quot;solar&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Map: clusters 1/2</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+    <img width=100% src='map1.png' />
+</div>
+
+<p>The interactive map diplays each location of a power plant with a blue circle. 
+The markers that are near each other are grouped as a cluster. In this case there are three main clusters...</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Map: clusters 2/2</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+    <img width=100% src='map2.png' />
+</div>
+
+<p class='..'>to see each individual location, zoom in.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Thanks!</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Application overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How to use it'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data source'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Map: clusters 1/2'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Map: clusters 2/2'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Thanks!'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
