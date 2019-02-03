@@ -16,7 +16,7 @@
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
   <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
   <script data-main="libraries/frameworks/io2012/js/slides" 
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
@@ -46,38 +46,23 @@
   </hgroup>
   <article data-timings="">
     <div style='text-align: center;'>
-    <img width=100% src='./overview.png' />
+    <img height=200px src='./overview.png' />
 </div>
 
-<p>The application shows the locations of the electric power plants in the United States segmented by their primary energy source. </p>
+<p>The application shows the locations of the electric power plants in the United States segmented by their primary energy source.</p>
 
-<p>Application URL: <a href="https://jaimeleal.shinyapps.io/ddp-final-project/">https://jaimeleal.shinyapps.io/ddp-final-project/</a> </p>
+<h3>How to use it</h3>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<p><strong>Input</strong> : From the dropdown list on the right, select the primary energy source.</p>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>How to use it</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>The application is very simple to use.</p>
-
-<h3>Input</h3>
-
-<p>From the dropdown list on the right, select the primary energy source.</p>
-
-<h3>Output</h3>
-
-<p>The interactive map diplays each location of a power plant with a circle. 
+<p><strong>Output</strong> : The interactive map diplays each location of a power plant with a circle. 
 If the markers are near each other they are grouped as a cluster. To see each individual location, zoom in.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
     <h2>Data source</h2>
   </hgroup>
@@ -106,7 +91,7 @@ print(dim(power_plants))
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-3" style="background:;">
   <hgroup>
     <h2>Map: clusters 1/2</h2>
   </hgroup>
@@ -122,7 +107,7 @@ The markers that are near each other are grouped as a cluster. In this case ther
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>Map: clusters 2/2</h2>
   </hgroup>
@@ -133,16 +118,6 @@ The markers that are near each other are grouped as a cluster. In this case ther
 
 <p class='..'>to see each individual location, zoom in.</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>Thanks!</h2>
-  </hgroup>
-  <article data-timings="">
-    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -159,38 +134,26 @@ The markers that are near each other are grouped as a cluster. In this case ther
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='How to use it'>
+        data-slide=2 title='Data source'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Data source'>
+        data-slide=3 title='Map: clusters 1/2'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Map: clusters 1/2'>
+        data-slide=4 title='Map: clusters 2/2'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Map: clusters 2/2'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Thanks!'>
-         6
       </a>
     </li>
   </ul>
   </div>  <!--[if IE]>
     <script 
-      src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
     </script>
     <script>CFInstall.check({mode: 'overlay'});</script>
   <![endif]-->
