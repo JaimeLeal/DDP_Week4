@@ -6,7 +6,6 @@ framework   : io2012
 highlighter : highlight.js  
 hitheme     : tomorrow      
 widgets     : []            
-mode        : selfcontained 
 knit        : slidify::knit2slides  
 ---  
 
