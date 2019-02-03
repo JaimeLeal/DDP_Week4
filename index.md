@@ -13,7 +13,7 @@ knit        : slidify::knit2slides
 ## Application overview
 
 <div style='text-align: center;'>
-    <img width=100% src='overview.png' />
+    <img width=100% src='./overview.png' />
 </div>
 The application shows the locations of the electric power plants in the United States segmented by their primary energy source. 
 
@@ -63,7 +63,7 @@ print(as.character(unique(power_plants$PrimSource)))
 ---
 ## Map: clusters 1/2
 <div style='text-align: center;'>
-    <img width=100% src='map1.png' />
+    <img width=100% src='./map1.png' />
 </div>
 
 The interactive map diplays each location of a power plant with a blue circle. 
@@ -72,7 +72,7 @@ The markers that are near each other are grouped as a cluster. In this case ther
 ---
 ## Map: clusters 2/2
 <div style='text-align: center;'>
-    <img width=100% src='map2.png' />
+    <img width=100% src='./map2.png' />
 </div>
 
 ... to see each individual location, zoom in.
